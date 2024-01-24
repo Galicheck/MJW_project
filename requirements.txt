@@ -4,5 +4,5 @@ matplotlib
 scipy
 scikit-learn
 seaborn
-dvc==2.45.1
-dvc-ssh==3.0.0
+dvc
+dvc-ssh
