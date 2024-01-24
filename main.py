@@ -1,2 +1,2 @@
 print('test')
-print(Cześć ludziki)
+print('Cześć ludziki')
