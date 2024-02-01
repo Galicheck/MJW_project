@@ -159,6 +159,18 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
 
+<<<<<<< HEAD
 *.csv
 *.npy
 *.png
+=======
+# Data
+*.csv
+
+# Numpy files
+*.npy
+
+# Image files
+*.png
+*.jpg
+>>>>>>> 217acf25126514ce8ff81950d1bae9de9431a306
