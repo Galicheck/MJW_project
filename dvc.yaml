@@ -1,0 +1,26 @@
+stages:
+  pca:
+    cmd: python src/pca.py
+    params:
+      - pca
+    deps:
+      - data/winequalityN.csv
+      - src/pca.py
+      - src/config.py
+    outs:
+      - data/red_pca_x.csv
+      - data/red_pca_y.csv
+      - data/white_pca_x.csv
+      - data/white_pca_y.csv
+  sgd_classifier:
+    cmd: python src/sgd_classifier.py
+    params:
+      - sgd_classifier
+    deps:
+      - data/red_pca_x.csv
+      - data/red_pca_y.csv
+      - data/white_pca_x.csv
+      - data/white_pca_y.csv
+    outs:
+      - plots/confusion_red.png
+      - plots/confusion_white.png
