@@ -23,7 +23,7 @@ max_iter = params['max_iter']  # Maximum number of iterations
 test_size = params['test_size']  # Test set size
 
 
-def SGD():
+def sgd():
     """ Adapting SGD Classifier for red wine"""
     x = pd.read_csv(cfg.PCA.red_x)
     y = list(pd.read_csv(cfg.PCA.red_y)['Quality'])
@@ -39,7 +39,7 @@ def SGD():
     clf.fit(trainx, trainy)
 
     y_pred = clf.predict(testx)
-    score1 = round(accuracy_score(testy, y_pred)*100,2)
+    score1 = round(accuracy_score(testy, y_pred)*100, 2)
     print(str(score1)+"%")
 
     matrix = cm(testy, y_pred, labels=['Bad', 'Good', 'Great', 'Excellent'])
@@ -53,7 +53,7 @@ def SGD():
     x = pd.read_csv(cfg.PCA.white_x)
     y = list(pd.read_csv(cfg.PCA.white_y)['Quality'])
 
-    trainx, testx, trainy, testy = train_test_split(x, y, test_size = test_size)
+    trainx, testx, trainy, testy = train_test_split(x, y, test_size=test_size)
 
     scaler = StandardScaler()
     scaler.fit(trainx)
@@ -64,7 +64,7 @@ def SGD():
     clf.fit(trainx, trainy)
 
     y_pred = clf.predict(testx)
-    score2 = round(accuracy_score(testy, y_pred)*100,2)
+    score2 = round(accuracy_score(testy, y_pred)*100, 2)
     print(str(score2)+"%")
 
     matrix = cm(testy, y_pred, labels=['Bad', 'Good', 'Great', 'Excellent'])
@@ -78,4 +78,4 @@ def SGD():
 
 
 if __name__ == '__main__':
-    SGD()
+    sgd()
