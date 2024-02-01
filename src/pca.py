@@ -1,11 +1,11 @@
 """Preprocessing of the dataset"""
-import warnings
-warnings.filterwarnings("ignore")
-import pandas as pd
 from dvc.api import params_show
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 import config as cfg
+import warnings
+warnings.filterwarnings("ignore")
+import pandas as pd
 
 params = params_show()['pca']
 k_red = params['k_red']
@@ -46,7 +46,7 @@ def pca(data_red, data_white):
     """ Division into sets X and Y."""
     red_x = red.loc[:, red.columns != 'quality']
     red_y = red['quality']
-    """Standarizing data before and after PCA."""
+    """ Standardizing data before and after PCA. """
     scaler = StandardScaler().fit(red_x)
     red_x = scaler.transform(red_x)
     pca_red = PCA(n_components=k_red).fit(red_x)
@@ -55,8 +55,6 @@ def pca(data_red, data_white):
     df_red_pca_x = pd.DataFrame(data=red_x_pca,
                                 columns=[f'PC_{i + 1}' for i in range(red_x_pca.shape[1])])
     df_red_pca_y = pd.DataFrame({'Quality': categorize(list(red_y))})
-
-
 
     white = data_white
     white_x = white.loc[:, white.columns != 'quality']
@@ -77,6 +75,7 @@ def pca(data_red, data_white):
     df_white_pca_y.to_csv(cfg.PCA.white_y)
 
     return df_red_pca_x, df_red_pca_y, df_white_pca_x, df_white_pca_y
+
 
 def main():
     red, white = preprocessing()
