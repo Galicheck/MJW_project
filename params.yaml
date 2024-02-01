@@ -1,0 +1,10 @@
+pca:
+  k_red: 8
+  k_white: 8
+  test_size: 0.2
+sgd_classifier:
+  loss: "log_loss"
+  alpha: 0.001
+  penalty: "l2"
+  max_iter: 1500
+  test_size: 0.2
