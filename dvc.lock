@@ -9,12 +9,12 @@ stages:
       size: 390376
     - path: src/config.py
       hash: md5
-      md5: 809f67d4a87be480d76e7ff4c77dbbb4
-      size: 216
+      md5: 6079850f531abb452412e94dd571c715
+      size: 222
     - path: src/pca.py
       hash: md5
-      md5: 55753675c4fcbeaf682dfd89d97dcc21
-      size: 2674
+      md5: e815db9925b7d294b18e931a96bb2652
+      size: 2677
     params:
       params.yaml:
         pca:
@@ -24,16 +24,16 @@ stages:
     outs:
     - path: data/red_pca_x.csv
       hash: md5
-      md5: 389dc1c4f8f137325202996debfb17fa
-      size: 259764
+      md5: de800b2b8e7073834f66ea8bb14ed1ff
+      size: 259775
     - path: data/red_pca_y.csv
       hash: md5
       md5: ef3f3cdb831c4ca3908882ae83c13518
       size: 16578
     - path: data/white_pca_x.csv
       hash: md5
-      md5: 3b7323559fe9b29603de7f82d5474c46
-      size: 793504
+      md5: 99ae30464be4be7f15bf43064707fa8a
+      size: 793511
     - path: data/white_pca_y.csv
       hash: md5
       md5: bd76ad2dff0e8469e07a80cac1165dc9
@@ -43,16 +43,16 @@ stages:
     deps:
     - path: data/red_pca_x.csv
       hash: md5
-      md5: 389dc1c4f8f137325202996debfb17fa
-      size: 259764
+      md5: de800b2b8e7073834f66ea8bb14ed1ff
+      size: 259775
     - path: data/red_pca_y.csv
       hash: md5
       md5: ef3f3cdb831c4ca3908882ae83c13518
       size: 16578
     - path: data/white_pca_x.csv
       hash: md5
-      md5: 3b7323559fe9b29603de7f82d5474c46
-      size: 793504
+      md5: 99ae30464be4be7f15bf43064707fa8a
+      size: 793511
     - path: data/white_pca_y.csv
       hash: md5
       md5: bd76ad2dff0e8469e07a80cac1165dc9
@@ -68,9 +68,9 @@ stages:
     outs:
     - path: plots/confusion_red.png
       hash: md5
-      md5: c177424d49cc0b53e84de486c3b7144f
-      size: 26212
+      md5: 01fea6736fc308581c41c972e012be68
+      size: 26080
     - path: plots/confusion_white.png
       hash: md5
-      md5: b4a7bbae995975f6c52f6674fa0256fd
-      size: 28198
+      md5: 48784ac4aa53c6fb11d4f5626f905f2a
+      size: 28321
