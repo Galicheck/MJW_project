@@ -1,0 +1,5 @@
+[core]
+    remote = ssh-storage
+['remote "ssh-storage"']
+    url = ssh://153.19.8.113/home/jp/storages/jgalikowski_home
+    user = jp
